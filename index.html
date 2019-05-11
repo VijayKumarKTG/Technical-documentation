@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<!--[if lt IE 9]>
+    <script src = "http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<title>Technical Documentation Page for C Programming</title>
+</head>
+
+<body>
+	<div id="gridContainer">
+		<nav>
+			<header><h1>C Programming Documentation</h1></header>
+			<ul>
+				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#syntax">Syntax</a></li>
+				<li><a href="#reserved_words">Reserved Words</a></li>
+				<li><a href="#operators">Operators</a></li>
+				<li><a href="#data_types">Data Types</a></li>
+				<li><a href="#hello_world">Hello World</a></li>
+			</ul>
+		</nav>
+		<main id="main-doc">
+			<section class="main-section" id="introduction">
+				<header><h1>Introduction</h1></header>
+				<p>
+					C is a general-purpose, imperative computer programming language, supporting structured programming, lexical variable scope and recursion, while a static type system prevents many unintended operations. By desing, C provides constructs that map efficiently to typical machine instructions, and it has therefore found lasting use in applications that were prevoiusly coded in assembly language. Such applications include operating systems, as well as various application software for computers ranging from supercomputers to embedded systems.
+				</p>
+				<p>
+					C is an imperative procedural language. It was designed to be compiled using a relatively straightforward compiler, to provide low-level access to memory, to provide language constructs that map efficiently to machine instructions, and to require minimal runtime support. Despite its low-level capabilities, the language was designed to encoureage cross-platform programming. A standards-compliant C program that is written with portability in mind can ge compiled for a wide variety of computer platforms and operating systems with few changes to its source code; the language has become available on various platforms, from embedded microcontrollers to supercomputers.
+				</p>
+			</section>
+			<section class="main-section" id="syntax">
+				<header><h1>Syntax</h1></header>
+				<p>
+					C has a formal grammar specified by the C standard. Line endings are generally not significant in C; however, line boundaries do have significance during the preprocessing phase. Comments may appear either between the delimiters /* and */, or (since C99) following // until the end of the line. Comments delimited by /* and */ do not nest, and these sequences of characters are not interpreted as comment delimiters if they appear inside string or character literals.C source files contain declarations and function definitions. Function definitions, in turn, contain declarations and statements. Declarations either define new types using keywords such as struct, union, and enum, or assign types to and perhaps reserve storage for new variables, usually by writing the type followed by the variable name. Keywords such as char and int specify built-in types. Sections of code are enclosed in braces ({ and }, sometimes called "curly brackets") to limit the scope of declarations and to act as a single statement for control structures.
+				</p>
+				<h2>Character Set</h2>
+				<p>
+					The basic C source character set includes the following characters:
+					<ul id="charList">
+						<li>Lowercase and uppercase letters of ISO Basic Latin Alphabet: <code>a–z A–Z</code></li>
+						<li>Decimal digits: <code>0–9</code></li>
+						<li>Graphic characters: <code>! " # % &amp; ' ( ) * + , - . / : ; &lt; &#61; &gt; ? [ \ ] ^ _ { | } ~</code></li>
+						<li>Whitespace characters: space, horizontal tab, vertical tab, form feed, newline</li>
+					</ul>
+				</p>
+			</section>
+			<section class="main-section" id="reserved_words">
+				<header><h1>Reserved Words</h1></header>
+				<p>
+					C89 has 32 reserved words, also known as keywords, which are the words that cannot be used for any purposes other than those for which they are predefined:<br />
+					<code>
+						auto<br />
+						break<br />
+						case<br />
+						char<br />
+						const<br />
+						continue<br />
+						default<br />
+						do<br />
+						double<br />
+						else<br />
+						enum<br />
+						extern<br />
+						float<br />
+						for<br />
+						goto<br />
+						if<br />
+						int<br />
+						long<br />
+						register<br />
+						return<br />
+						short<br />
+						signed<br />
+						sizeof<br />
+						static<br />
+						struct<br />
+						switch<br />
+						typedef<br />
+						union<br />
+						unsigned<br />
+						void<br />
+						volatile<br />
+						while<br />
+					</code>
+				</p>
+				<p>
+					C99 reserved five more words:<br />
+					<code>
+						_Bool<br />
+						_Complex<br />
+						_Imaginary<br />
+						inline<br />
+						restrict<br />
+					</code>
+				</p>
+				<p>
+					C11 reserved seven more words:<br />
+					<code>
+						_Alignas<br />
+						_Alignof<br />
+						_Atomic<br />
+						_Generic<br />
+						_Noreturn<br />
+						_Static_assert<br />
+					</code>
+				</p>
+			</section>
+			<section class="main-section" id="operators">
+				<header><h1>Operators</h1></header>
+				<p>
+					Main article: Operators in C and C++. C supports a rich set of operators, which are symbols used within an expression to specify the manipulations to be performed while evaluating that expression. C has operators for:<br />
+					arithmetic: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code><br />
+					assignment: <code>=</code><br />
+					augmented assignment: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>&amp;=</code>, <code>|=</code>, <code>^=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code><br />
+					bitwise logic: <code>~</code>, <code>&amp;</code>, <code>|</code>, <code>^</code><br />
+					bitwise shifts: <code>&lt;&lt;</code>, <code>&gt;&gt;</code><br />
+					boolean logic: <code>!</code>, <code>&amp;&amp;</code>, <code>||</code><br />
+					conditional evaluation: <code>? :</code><br />
+					equality testing: <code>==</code>, <code>!=</code><br />
+					calling functions: <code>( )</code><br />
+					increment and decrement: <code>++</code>, <code>--</code><br />
+					member selection: <code>.</code>, <code>-&gt;</code><br />
+					object size: <code>sizeof</code><br />
+					order relations: <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code><br />
+					reference and dereference: <code>&amp;</code>, <code>*</code>, <code>[ ]</code><br />
+					sequencing: <code>,</code><br />
+					subexpression grouping: <code>( )</code><br />
+					type conversion: <code>(typename)</code><br />
+					C uses the operator = (used in mathematics to express equality) to indicate assignment, following the precedent of Fortran and PL/I, but unlike ALGOL and its derivatives. C uses the operator == to test for equality. The similarity between these two operators (assignment and equality) may result in the accidental use of one in place of the other, and in many cases, the mistake does not produce an error message (although some compilers produce warnings). For example, the conditional expression if(a==b+1) might mistakenly be written as if(a=b+1), which will be evaluated as true if a is not zero after the assignment.The C operator precedence is not always intuitive. For example, the operator == binds more tightly than (is executed prior to) the operators &amp; (bitwise AND) and | (bitwise OR) in expressions such as x &amp; 1 == 0, which must be written as (x &amp; 1) == 0 if that is the coder's intent.
+				</p>
+			</section>
+			<section class="main-section" id="data_types">
+				<header><h1>Data Types</h1></header>
+				<p>
+					The type system in C is static and weakly typed, which makes it similar to the type system of ALGOL descendants such as Pascal.There are built-in types for integers of various sizes, both signed and unsigned, floating-point numbers, and enumerated types (<code>enum</code>). Integer type char is often used for single-byte characters. C99 added a boolean datatype. There are also derived types including arrays, pointers, records (<code>struct</code>), and unions (union).C is often used in low-level systems programming where escapes from the type system may be necessary. The compiler attempts to ensure type correctness of most expressions, but the programmer can override the checks in various ways, either by using a type cast to explicitly convert a value from one type to another, or by using pointers or unions to reinterpret the underlying bits of a data object in some other way.
+				</p>
+				<h2>Pointers</h2>
+				<p>
+					C supports the use of pointers, a type of reference that records the address or location of an object or function in memory. Pointers can be dereferenced to access data stored at the address pointed to, or to invoke a pointed-to function. Pointers can be manipulated using assignment or pointer arithmetic. The run-time representation of a pointer value is typically a raw memory address (perhaps augmented by an offset-within-word field), but since a pointer's type includes the type of the thing pointed to, expressions including pointers can be type-checked at compile time. Pointer arithmetic is automatically scaled by the size of the pointed-to data type. Pointers are used for many purposes in C. Text strings are commonly manipulated using pointers into arrays of characters. Dynamic memory allocation is performed using pointers. Many data types, such as trees, are commonly implemented as dynamically allocated struct objects linked together using pointers. Pointers to functions are useful for passing functions as arguments to higher-order functions (such as qsort or bsearch) or as callbacks to be invoked by event handlers.
+				</p>
+				<p>
+					A null pointer value explicitly points to no valid location. Dereferencing a null pointer value is undefined, often resulting in a segmentation fault. Null pointer values are useful for indicating special cases such as no "next" pointer in the final node of a linked list, or as an error indication from functions returning pointers. In appropriate contexts in source code, such as for assigning to a pointer variable, a null pointer constant can be written as 0, with or without explicit casting to a pointer type, or as the NULL macro defined by several standard headers. In conditional contexts, null pointer values evaluate to false, while all other pointer values evaluate to true.
+				</p>
+				<p>
+					Void pointers (<code>void *</code>) point to objects of unspecified type, and can therefore be used as "generic" data pointers. Since the size and type of the pointed-to object is not known, void pointers cannot be dereferenced, nor is pointer arithmetic on them allowed, although they can easily be (and in many contexts implicitly are) converted to and from any other object pointer type.
+				</p>
+			</section>
+			<section class="main-section" id="hello_world">
+				<header><h1>Hello World</h1></header>
+				<p>
+					<code>
+						#include &lt;stdio.h&gt;<br />
+						int main(void)<br />
+						{<br />
+							&nbsp;&nbsp;printf("hello, world\n");<br />
+						}<br />
+					</code>
+				</p>
+				<p><output>hello, world</output></p>
+			</section>
+			<h2>Refrence</h2>
+			<p>All the documentation in this page is taken from the <a href="https://en.wikipedia.org/C_(programming_language)">wikipedia.org</a>.</p>
+		</main>
+	</div>
+</body>
+</html>
